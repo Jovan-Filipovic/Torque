@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Header, Footer, and Menu</title>
+    <style>
+
+        /* Style for the header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #900c3f;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Logo styling */
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            height: 40px;
+            margin-right: 10px; /* Space between the logo image and text */
+        }
+
+        /* Middle content styling */
+        .header .middle {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .header .middle h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header .middle h2 {
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .header .middle h3 {
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: lighter;
+        }
+
+        /* Date and time styling */
+        .header .datetime {
+            font-size: 14px;
+        }
+
+        /* Style for the navigation menu */
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #555;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #777;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+			overflow-y: auto; /* Make the body scrollable */
+        }
+		
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+		th {
+        background-color: #333; /* Dark gray */
+        color: white; /* White text for contrast */
+        padding: 10px;
+		}
+
+       button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+
+        .image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image img {
+            width: 80%;
+            height: auto;
+			align:center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+		
+        /* Style for the footer */
+    .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>ENCOS</span>
+        </div>
+        
+        <!-- Middle content -->
+        <div class="middle">
+            <h1>ENCOS Engineerging Technical Consulting and Supervision</h1>
+            <h2>Online Engineering Tools</h2>
+            <h3>by prokon</h3>
+        </div>
+        
+        <!-- Date and time -->
+        <div class="datetime" id="datetime"></div>
+    </div>
+
+    <!-- Navigation menu -->
+    <div class="menu">
+        <a onclick="alert('Home button clicked');">Home</a>
+        <a onclick="alert('About button clicked');">About</a>
+    </div>
+
+    <div class="container">
+        <!-- First Table -->
+		
+		<!-- Data for cross line -->
+		<h1>1. Input Data</h1>
+		<table id="table-input" style="background=#333;">
+            <tr>
+                <th style="align:left width:5%;">Variable</th>
+                <th style="width:15%;">Value</th>
+                <th style="width:20%;">Unit</th>
+                <th style="width:60% align:left;">Description</th>
+            </tr>
+			<tr>
+                <td>D:</td>
+                <td><input type="nummber" id="D" value="20.0" style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Bolt Diameter (metric)</td>
+            </tr>
+            <tr>
+                <td>P:</td>
+                <td><input type="nummber" id="P" value="2.5" style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Bolt thread</td>
+            </tr>
+            <tr>
+                <td>z:</td>
+                <td><input type="nummber" id="z" value="1.0" style="border:none text-align:center;"></td>
+                <td>-</td>
+                <td>Nummber of thread per coil</td>
+            </tr>
+			<tr>
+                <td>s:</td>
+                <td><input type="nummber" id="s" value="30.0" style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Wrench size</td>
+            </tr>
+			<tr>
+                <td>D0:</td>
+                <td><input type="nummber" id="D_0" value="22.0" style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Bolt hole diameter</td>
+            </tr>
+			<tr>
+                <td>&alpha;</td>
+                <td><input type="nummber" id="alpha" value="60.0" style="border:none text-align:center;"></td>
+                <td>deg</td>
+                <td>Thread angle</td>
+            </tr>
+			<tr>
+                <td>&mu;</td>
+                <td><input type="nummber" id="u" value="0.11" style="border:none text-align:center;"></td>
+                <td>-</td>
+                <td>Friction factor for thread (copper lubricant)</td>
+            </tr>
+			<tr>
+                <td>&mu;n</td>
+                <td><input type="nummber" id="un" value="0.22" style="border:none text-align:center;"></td>
+                <td>-</td>
+                <td>Friction factor for nut(dry surface, mashined)</td>
+            </tr>
+			<tr>
+                <td>Re:</td>
+                <td><input type="nummber" id="Re" value="640.0" style="border:none text-align:center;"></td>
+                <td>MPa</td>
+                <td>Yield stress of bolt</td>
+            </tr>	
+			<tr>
+                <td>&phi;</td>
+                <td><input type="nummber" id="Re_ratio" value="0.75" style="border:none text-align:center;"></td>
+                <td>-</td>
+                <td>Near yield limit ratio</td>
+            </tr>
+			
+        </table>
+		
+		<!-- Buttons -->
+        <div>
+			<button onclick="clear_values()">Clear</button>
+			<button onclick="load_example()">Example</button>
+			<button onclick="calculate()">Calculate</button>
+        </div>
+		
+        <!-- Results Table -->
+		<h1>2. Result of calculation</h1>
+        <table id= "table-result" style="background=#333;">
+            <tr>
+                <th style="align:left width:5%;">Variable</th>
+                <th style="width:15%;">Value</th>
+                <th style="width:20%;">Unit</th>
+                <th style="width:60% align:left;">Description</th>
+            </tr>
+            
+			<tr>
+                <td>d1:</td>
+                <td><input type="nummber" id="d_1" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Smallest diameter inside nut</td>
+            </tr>
+			<tr>
+                <td>d2:</td>
+                <td><input type="nummber" id="d_2" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Load calculation diameter</td>
+            </tr>
+			<tr>
+                <td>d3:</td>
+                <td><input type="nummber" id="d_3" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Min. root thread diameter</td>
+            </tr>
+			<tr>
+                <td>&phi;:</td>
+                <td><input type="nummber" id="phi" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>rad</td>
+                <td>Thread coil angle</td>
+            </tr>
+			<tr>
+                <td>&rho;n:</td>
+                <td><input type="nummber" id="rn" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>rad</td>
+                <td>Thread friction angle</td>
+            </tr>
+			<tr>
+                <td>r&mu;:</td>
+                <td><input type="nummber" id="ru" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>mm</td>
+                <td>Wrench friction diameter</td>
+            </tr>
+			<tr>
+                <td>As:</td>
+                <td><input type="nummber" id="As" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>mm2</td>
+                <td>Bolt Stress calculation area</td>
+            </tr>
+			<tr>
+                <td>F:</td>
+                <td><input type="nummber" id="F" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>N</td>
+                <td>Bolt tension Axial Force</td>
+            </tr>
+			<tr>
+                <td>Tn:</td>
+                <td><input type="nummber" id="Tn" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>Nm</td>
+                <td>Torque for friction on thread</td>
+            </tr>
+			<tr>
+                <td>Tu:</td>
+                <td><input type="nummber" id="Tu" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>Nm</td>
+                <td>Torque for friction under the nut</td>
+            </tr>
+			<tr>
+                <td>T:</td>
+                <td><input type="nummber" id="T" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>Nm</td>
+                <td>Total Torque required</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+	
+		function calculate() {
+		
+		// get input values
+		let D = parseFloat(document.getElementById("D").value);
+		let P = parseFloat(document.getElementById("P").value);
+		let z = parseFloat(document.getElementById("z").value);
+		let u = parseFloat(document.getElementById("u").value);
+		let un = parseFloat(document.getElementById("un").value);
+		let alpha = parseFloat(document.getElementById("alpha").value);
+		let s = parseFloat(document.getElementById("s").value);
+		let D_0 = parseFloat(document.getElementById("D_0").value);
+		let Re = parseFloat(document.getElementById("Re").value);
+		let Re_ratio = parseFloat(document.getElementById("Re_ratio").value);
+		
+		//calculate values
+		let H = P * Math.sqrt(3)/2;
+		let d_1 = D - 1.0825*P;
+		let d_2 = D - 0.6495*P;
+		let d_3 = d_1 - H/6;		
+		let phi = Math.atan((z*P)/(d_2 * Math.PI));
+		let mi_n = u/Math.cos(0.5*alpha*3.141592/180);
+		let rn = Math.atan(mi_n); 
+		let ru = (1/3)*(s**3 - D_0**3)/(s**2 - D_0**2);
+		let As = (Math.PI/4)*((d_2 + d_3)/2)**2;
+		let F = Re * Re_ratio * As;
+		let Tn = 0.001*F*(d_2/2)*Math.tan(phi+rn);
+		let Tu = 0.001*F*ru*un;
+		let T = Tn + Tu;
+		
+		// write output: rounded values
+		document.getElementById("d_1").value = d_1.toFixed(4);
+		document.getElementById("d_2").value = d_2.toFixed(4);
+		document.getElementById("d_3").value = d_3.toFixed(4);
+		document.getElementById("phi").value = phi.toFixed(4);
+		document.getElementById("rn").value = rn.toFixed(4);
+		document.getElementById("ru").value = ru.toFixed(4);
+		document.getElementById("As").value = As.toFixed(4);
+		document.getElementById("F").value = F.toFixed(4);
+		document.getElementById("Tn").value = Tn.toFixed(4);
+		document.getElementById("Tu").value = Tu.toFixed(4);
+		document.getElementById("T").value = T.toFixed(4);
+		
+		alert("Calculation finished!");
+		
+		}
+		
+		function clear_values() {
+		
+		// clear input values
+		document.getElementById("D").value = "0.0";
+		document.getElementById("P").value = "0.0";
+		document.getElementById("z").value = "0.0";
+		document.getElementById("s").value = "0.0";
+		document.getElementById("D_0").value = "0.0";
+		document.getElementById("alpha").value = "0.0";
+		document.getElementById("u").value = "0.0";
+		document.getElementById("un").value = "0.0";
+		document.getElementById("Re").value = "0.0";
+		document.getElementById("Re_ratio").value = "0.0";
+		
+		// clear output values
+		document.getElementById("d_1").value = "0.0";
+		document.getElementById("d_2").value = "0.0";
+		document.getElementById("d_3").value = "0.0";
+		document.getElementById("phi").value = "0.0";
+		document.getElementById("rn").value = "0.0";
+		document.getElementById("ru").value = "0.0";
+		document.getElementById("As").value = "0.0";
+		document.getElementById("F").value = "0.0";
+		document.getElementById("Tn").value = "0.0";
+		document.getElementById("Tu").value = "0.0";
+		document.getElementById("T").value = "0.0";
+		
+		alert("values cleared!");
+		
+		}
+		
+		function load_example() {
+		
+		// load input values
+		document.getElementById("D").value = "20.0";
+		document.getElementById("P").value = "2.5";
+		document.getElementById("z").value = "1.0";
+		document.getElementById("s").value = "30.0";
+		document.getElementById("D_0").value = "22.0";
+		document.getElementById("alpha").value = "60.0";
+		document.getElementById("u").value = "0.11";
+		document.getElementById("un").value = "0.11";
+		document.getElementById("Re").value = "640.0";
+		document.getElementById("Re_ratio").value = "0.75";
+		
+		alert("example loaded!");
+		
+		}
+		
+ 		<!-- JavaScript for dynamic date and time -->
+        function updateDateTime() {
+            const datetimeElement = document.getElementById("datetime");
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            datetimeElement.textContent = now.toLocaleString("en-US", options);
+        }
+
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initial update
+    </script>
+
+
+</body>
+
+<footer>
+    <!-- Footer -->
+	<div class="footer" style="text-align: center; padding: 20px; background-color: #333; color: #fff;">
+    <p>Contact us via:</p>
+    <a href="mailto:office.prokon.so@promonting.in.rs" style="margin: 0 10px; color: #fff;">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+    <a href="viber://chat?number=123456789" style="margin: 0 10px; color: #fff;">
+      <i class="fab fa-viber"></i> Viber
+    </a>
+    <a href="https://facebook.com/example" target="_blank" style="margin: 0 10px; color: #fff;">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+    <p>&copy; 2025. All rights reserved.</p>
+  </div>
+</footer>
+
+</html>

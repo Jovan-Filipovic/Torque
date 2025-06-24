@@ -305,7 +305,7 @@
                 <td>mm2</td>
                 <td>Bolt Stress calculation area</td>
             </tr>
-			<tr>
+		<tr>
                 <td>F:</td>
                 <td><input type="nummber" id="F" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>N</td>
@@ -353,6 +353,19 @@
 	<tr>
         <td>3.</td>
         <td><input type="text" id="Note_3" value="Before any comertial use, consult Senior/Licenced Engineer." readonly style="width:100% border:none text-align:center;"></td>	
+        </tr>
+	<tr>
+        <td>4.</td>
+        <td><input type="text" id="Note_4" value="Friction factor is used for MOLYKOTE 1000." readonly style="width:100% border:none text-align:center;"></td>	
+        </tr>
+        <td>5.</td>
+        <td><input type="text" id="Note_5" value=" " readonly style="width:100% border:none text-align:center;"></td>	
+        </tr>
+        <td>6.</td>
+        <td><input type="text" id="Note_6" value=" " readonly style="width:100% border:none text-align:center;"></td>	
+        </tr>
+        <td>7.</td>
+        <td><input type="text" id="Note_7" value=" " readonly style="width:100% border:none text-align:center;"></td>	
         </tr>
 	</table>
 </div>
@@ -436,7 +449,11 @@
 		document.getElementById("Note_1").value = "";
 		document.getElementById("Note_2").value = "";
 		document.getElementById("Note_3").value = "";
-		
+		document.getElementById("Note_4").value = "";
+		document.getElementById("Note_5").value = "";
+		document.getElementById("Note_6").value = "";
+		document.getElementById("Note_7").value = "";
+			
 		alert("Values cleared  from input and result fields.");
 		
 		}

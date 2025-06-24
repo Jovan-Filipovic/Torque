@@ -328,12 +328,20 @@
                 <td>Nm</td>
                 <td>Torque for friction under the nut</td>
             </tr>
-			<tr>
+		<tr>
                 <td>T:</td>
                 <td><input type="nummber" id="T" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>Nm</td>
                 <td>Total Torque required</td>
             </tr>
+            </tr>
+		<tr>
+                <td>ratio:</td>
+                <td><input type="nummber" id="r_T" value="0.00" readonly style="border:none text-align:center;"></td>
+                <td>%</td>
+                <td>Ratio T<sub>&mu;</sub> / T<sub>n</sub></td>
+            </tr>
+
         </table>
 	    
 	<h1>3. Notes</h1>
@@ -401,6 +409,7 @@
 		let Tn = 0.001*F*(d_2/2)*Math.tan(phi+rn);
 		let Tu = 0.001*F*ru*un;
 		let T = Tn + Tu;
+		let r_T = 100*Tu/Tn;
 		
 		// write output: rounded values
 		document.getElementById("d_1").value = d_1.toFixed(4);
@@ -414,6 +423,7 @@
 		document.getElementById("Tn").value = Tn.toFixed(4);
 		document.getElementById("Tu").value = Tu.toFixed(4);
 		document.getElementById("T").value = T.toFixed(4);
+		document.getElementById("r_T").value = r_T.toFixed(2);
 		
 		alert("Calculation finished.");
 		
@@ -445,6 +455,7 @@
 		document.getElementById("Tn").value = "0.0";
 		document.getElementById("Tu").value = "0.0";
 		document.getElementById("T").value = "0.0";
+		document.getElementById("r_T").value = "0.00";
 
 		// clear notes fields
 		document.getElementById("Note_1").value = "";

@@ -1,4 +1,4 @@
-/* Style for the header */
+/* ============= Header Styles ========== */
 .header {
 display: flex;
 justify-content: space-between;
@@ -132,7 +132,7 @@ max-width: 800px;
 margin: 0 auto;
 }
 		
-/* Style for the footer */
+/* ============= Footer Styles ========== */
 .footer {
 text-align: center;
 background-color: #333;

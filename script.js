@@ -53,7 +53,7 @@ function load_example() {
 	document.getElementById("D").value = "76.000";
 	document.getElementById("P").value = "3.000";
 	document.getElementById("z").value = "1.0";
-	document.getElementById("s").value = "110.0";
+	document.getElementById("s").value = "115.0";
 	document.getElementById("D_0").value = "79.400";
 	document.getElementById("alpha").value = "60.00";
 	document.getElementById("u").value = "0.13";

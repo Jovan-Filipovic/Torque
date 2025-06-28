@@ -44,6 +44,7 @@
                 <th style="width:20%;">Unit</th>
                 <th style="width:60% align:left;">Description</th>
             </tr>
+		<b>Thread geometry data</b><br>
 		<tr>
                 <td>D:</td>
                 <td><input type="nummber" id="D" value="0.00" style="border:none text-align:center;"></td>
@@ -80,6 +81,7 @@
                 <td>deg</td>
                 <td>Thread angle</td>
             </tr>
+		<b>Friction data</b><br>
 		<tr>
                 <td>&mu;</td>
                 <td><input type="nummber" id="u" value="0.00" style="border:none text-align:center;"></td>
@@ -92,12 +94,29 @@
                 <td>-</td>
                 <td>Friction factor for nut(dry surface, mashined)</td>
             </tr>
+			
+		<b>Bolt stress data</b><br>
+		<tr>
+                <td>BM:</td>
+                <td><input type="nummber" id="bm" value="SA-193 Gr.B16" style="border:none text-align:center;"></td>
+                <td>-</td>
+                <td>Bolt material</td>
+           	</tr>
+			
 		<tr>
                 <td>R<sub>e</sub>:</td>
                 <td><input type="nummber" id="Re" value="0.00" style="border:none text-align:center;"></td>
                 <td>MPa</td>
                 <td>Yield stress of bolt</td>
-            </tr>	
+           	</tr>
+			
+		<tr>
+                <td>T<sub>e</sub>:</td>
+                <td><input type="nummber" id="t" value="20.00" style="border:none text-align:center;"></td>
+                <td><sup>o</sup>C</td>
+                <td>Bolt temperature</td>
+           	</tr>
+			
 		<tr>
                 <td>&phi;</td>
                 <td><input type="nummber" id="Re_ratio" value="0.00" style="border:none text-align:center;"></td>
@@ -159,6 +178,12 @@
                 <td><input type="nummber" id="ru" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>mm</td>
                 <td>Wrench friction diameter</td>
+            </tr>
+		<tr>
+                <td>d<sub>s</sub>:</td>
+                <td><input type="nummber" id="ds" value="0.0" readonly style="border:none text-align:center;"></td>
+                <td>mm<sup>2</sup></td>
+                <td>Bolt Stress calculation diameter</td>
             </tr>
 		<tr>
                 <td>A<sub>s</sub>:</td>

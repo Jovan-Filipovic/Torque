@@ -44,7 +44,7 @@
                 <th style="width:20%;">Unit</th>
                 <th style="width:60% align:left;">Description</th>
             </tr>
-			<tr>
+		<tr>
                 <td>D:</td>
                 <td><input type="nummber" id="D" value="0.00" style="border:none text-align:center;"></td>
                 <td>mm</td>
@@ -62,43 +62,43 @@
                 <td>-</td>
                 <td>Nummber of thread per coil</td>
             </tr>
-			<tr>
+		<tr>
                 <td>s:</td>
                 <td><input type="nummber" id="s" value="0.00" style="border:none text-align:center;"></td>
                 <td>mm</td>
                 <td>Wrench size</td>
             </tr>
-			<tr>
+		<tr>
                 <td>D<sub>0</Sub>:</td>
                 <td><input type="nummber" id="D_0" value="0.00" style="border:none text-align:center;"></td>
                 <td>mm</td>
                 <td>Bolt hole diameter</td>
             </tr>
-			<tr>
+		<tr>
                 <td>&alpha;</td>
                 <td><input type="nummber" id="alpha" value="0.00" style="border:none text-align:center;"></td>
                 <td>deg</td>
                 <td>Thread angle</td>
             </tr>
-			<tr>
+		<tr>
                 <td>&mu;</td>
                 <td><input type="nummber" id="u" value="0.00" style="border:none text-align:center;"></td>
                 <td>-</td>
                 <td>Friction factor for thread (copper lubricant)</td>
             </tr>
-			<tr>
+		<tr>
                 <td>&mu;<sub>nut</sub></td>
                 <td><input type="nummber" id="un" value="0.00" style="border:none text-align:center;"></td>
                 <td>-</td>
                 <td>Friction factor for nut(dry surface, mashined)</td>
             </tr>
-			<tr>
+		<tr>
                 <td>R<sub>e</sub>:</td>
                 <td><input type="nummber" id="Re" value="0.00" style="border:none text-align:center;"></td>
                 <td>MPa</td>
                 <td>Yield stress of bolt</td>
             </tr>	
-			<tr>
+		<tr>
                 <td>&phi;</td>
                 <td><input type="nummber" id="Re_ratio" value="0.00" style="border:none text-align:center;"></td>
                 <td>-</td>
@@ -107,15 +107,15 @@
 			
         </table>
 		
-		<!-- Buttons -->
+	<!-- Buttons section -->
         <div>
-			<button onclick="clear_values()">Clear</button>
-			<button onclick="load_example()">Example</button>
-			<button onclick="calculate()">Calculate</button>
+		<button onclick="clear_values()">Clear</button>
+		<button onclick="load_example()">Example</button>
+		<button onclick="calculate()">Calculate</button>
         </div>
 		
-        <!-- Results Table -->
-		<h1>2. Result of calculation</h1>
+        <!-- Results Table section -->
+	<h1>2. Result of calculation</h1>
         <table id= "table-result" style="background=#333;">
             <tr>
                 <th style="align:left width:5%;">Variable</th>
@@ -124,43 +124,43 @@
                 <th style="width:60% align:left;">Description</th>
             </tr>
             
-			<tr>
+		<tr>
                 <td>d<sub>1</sub>:</td>
                 <td><input type="nummber" id="d_1" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>mm</td>
                 <td>Smallest diameter inside nut</td>
             </tr>
-			<tr>
+		<tr>
                 <td>d<sub>2</sub>:</td>
                 <td><input type="nummber" id="d_2" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>mm</td>
                 <td>Load calculation diameter</td>
             </tr>
-			<tr>
+		<tr>
                 <td>d<sub>3</sub>:</td>
                 <td><input type="nummber" id="d_3" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>mm</td>
                 <td>Min. root thread diameter</td>
             </tr>
-			<tr>
-                <td>&phi;:</td>
+		<tr>
+                <td>&pi;:</td>
                 <td><input type="nummber" id="phi" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>rad</td>
                 <td>Thread coil angle</td>
             </tr>
-			<tr>
+		<tr>
                 <td>&rho;<sub>n</sub>:</td>
                 <td><input type="nummber" id="rn" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>rad</td>
                 <td>Thread friction angle</td>
             </tr>
-			<tr>
+		<tr>
                 <td>r&mu;:</td>
                 <td><input type="nummber" id="ru" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>mm</td>
                 <td>Wrench friction diameter</td>
             </tr>
-			<tr>
+		<tr>
                 <td>A<sub>s</sub>:</td>
                 <td><input type="nummber" id="As" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>mm<sup>2</sup></td>
@@ -172,13 +172,13 @@
                 <td>N</td>
                 <td>Bolt tension Axial Force</td>
             </tr>
-			<tr>
+		<tr>
                 <td>T<sub>n</sub>:</td>
                 <td><input type="nummber" id="Tn" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>Nm</td>
                 <td>Torque for friction on thread</td>
             </tr>
-			<tr>
+		<tr>
                 <td>T<sub>&mu;</sub>:</td>
                 <td><input type="nummber" id="Tu" value="0.0" readonly style="border:none text-align:center;"></td>
                 <td>Nm</td>
@@ -202,11 +202,10 @@
 	    
 	<h1>3. Notes</h1>
         <table id= "table-notes" style="background=#333;">
-            <tr>
-                <th style="align:left width:5%;">No.</th>
-                <th style="width:95%;">Comment</th>
-            </tr>
-
+        <tr>
+        <th style="align:left width:5%;">No.</th>
+        <th style="width:95%;">Comment</th>
+        </tr>
 	<tr>
         <td>1.</td>
         <td><input type="text" id="Note_1" value="Example calculation is only for educational purpose." readonly style="width:100% border:none text-align:center;"></td>	

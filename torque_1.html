@@ -35,63 +35,81 @@
     <div class="container">
         <!-- First Table -->
 		
-		<!-- Data for cross line -->
-		<h1>1. Input Data</h1>
-		<table id="table-input" style="background=#333;">
-            <tr>
-                <th style="align:left width:5%;">Variable</th>
-                <th style="width:15%;">Value</th>
-                <th style="width:20%;">Unit</th>
-                <th style="width:60% align:left;">Description</th>
-            </tr>
-		<tr>
-		<td colspan="4"><b>a. Thread geometry data</b></td>
-  		</tr>
+	<!-- Data for cross line -->
+	<h1>1. Input Data</h1>
+	<table id="table-input" style="background=#333;">
+        
+	<tr>
+        <th style="align:left width:5%;">Variable</th>
+        <th style="width:15%;">Value</th>
+        <th style="width:20%;">Unit</th>
+        <th style="width:60% align:left;">Description</th>
+        </tr>
+	
+	<tr>
+	<td colspan="4" align="left"><b>a. Thread geometry data</b></td>
+  	</tr>
 
-		<tr>
-                <td>D:</td>
-                <td><input type="nummber" id="D" value="0.00" style="border:none text-align:center;"></td>
-                <td>mm</td>
-                <td>Bolt Diameter (metric)</td>
-            </tr>
-            <tr>
-                <td>P:</td>
-                <td><input type="nummber" id="P" value="0.00" style="border:none text-align:center;"></td>
-                <td>mm</td>
-                <td>Bolt thread</td>
-            </tr>
-            <tr>
-                <td>z:</td>
-                <td><input type="nummber" id="z" value="0.00" style="border:none text-align:center;"></td>
-                <td>-</td>
-                <td>Nummber of thread per coil</td>
-            </tr>
-		<tr>
-                <td>s:</td>
-                <td><input type="nummber" id="s" value="0.00" style="border:none text-align:center;"></td>
-                <td>mm</td>
-                <td>Wrench size</td>
-            </tr>
-		<tr>
-                <td>D<sub>0</Sub>:</td>
-                <td><input type="nummber" id="D_0" value="0.00" style="border:none text-align:center;"></td>
-                <td>mm</td>
-                <td>Bolt hole diameter</td>
-            </tr>
-		<tr>
-                <td>&alpha;</td>
-                <td><input type="nummber" id="alpha" value="0.00" style="border:none text-align:center;"></td>
-                <td>deg</td>
-                <td>Thread angle</td>
-            </tr>
-		<b>Friction data</b><br>
-		<tr>
-                <td>&mu;</td>
-                <td><input type="nummber" id="u" value="0.00" style="border:none text-align:center;"></td>
-                <td>-</td>
-                <td>Friction factor for thread (copper lubricant)</td>
-            </tr>
-		<tr>
+	<tr>
+        <td>D:</td>
+        <td><input type="nummber" id="D" value="0.00" style="border:none text-align:center;"></td>
+        <td>mm</td>
+        <td>Bolt Diameter (metric)</td>
+        </tr>
+        
+	<tr>
+        <td>P:</td>
+        <td><input type="nummber" id="P" value="0.00" style="border:none text-align:center;"></td>
+        <td>mm</td>
+        <td>Bolt thread</td>
+        </tr>
+        
+	<tr>
+        <td>z:</td>
+        <td><input type="nummber" id="z" value="0.00" style="border:none text-align:center;"></td>
+        <td>-</td>
+        <td>Nummber of thread per coil</td>
+        </tr>
+	
+	<tr>
+        <td>s:</td>
+        <td><input type="nummber" id="s" value="0.00" style="border:none text-align:center;"></td>
+        <td>mm</td>
+        <td>Wrench size</td>
+        </tr>
+	
+	<tr>
+        <td>D<sub>0</Sub>:</td>
+        <td><input type="nummber" id="D_0" value="0.00" style="border:none text-align:center;"></td>
+        <td>mm</td>
+        <td>Bolt hole diameter</td>
+        </tr>
+	
+	<tr>
+        <td>&alpha;</td>
+        <td><input type="nummber" id="alpha" value="0.00" style="border:none text-align:center;"></td>
+        <td>deg</td>
+        <td>Thread angle</td>
+        </tr>
+	
+	<tr>
+	<td colspan="4" align="left"><b>b. Lubricant data</b></td>
+  	</tr>
+		
+	<tr>
+        <td>Name:</td>
+        <td><input type="nummber" id="lu" value="None" style="border:none text-align:center;"></td>
+        <td>-</td>
+        <td>Lubricant name</td>
+        </tr><tr>
+        
+	<td>&mu;</td>
+        <td><input type="nummber" id="u" value="0.00" style="border:none text-align:center;"></td>
+        <td>-</td>
+        <td>Friction factor for thread (copper lubricant)</td>
+        </tr>
+	
+	<tr>
                 <td>&mu;<sub>nut</sub></td>
                 <td><input type="nummber" id="un" value="0.00" style="border:none text-align:center;"></td>
                 <td>-</td>

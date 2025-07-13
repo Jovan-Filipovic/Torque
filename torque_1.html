@@ -33,9 +33,11 @@
     </div>
 
     <div class="container">
-        <!-- First Table -->
 		
-	<!-- Data for cross line -->
+	<!-- --------------------- -->
+	<!-- Input table           -->
+	<!-- --------------------- -->
+	
 	<h1>1. Input Data</h1>
 	<table id="table-input" style="background=#333;">
         
@@ -51,43 +53,43 @@
   	</tr>
 
 	<tr>
-        <td>D:</td>
-        <td><input type="nummber" id="D" value="0.00" style="border:none text-align:center;"></td>
+        <td>D :=</td>
+        <td><input type="nummber" id="D" value="0.00" style="border:none text-align:right;"></td>
         <td>mm</td>
         <td>Bolt Diameter (metric)</td>
         </tr>
         
 	<tr>
-        <td>P:</td>
-        <td><input type="nummber" id="P" value="0.00" style="border:none text-align:center;"></td>
+        <td>P :=</td>
+        <td><input type="nummber" id="P" value="0.00" style="border:none text-align:cenrightter;"></td>
         <td>mm</td>
         <td>Bolt thread</td>
         </tr>
         
 	<tr>
-        <td>z:</td>
-        <td><input type="nummber" id="z" value="0.00" style="border:none text-align:center;"></td>
+        <td>z :=</td>
+        <td><input type="nummber" id="z" value="0.00" style="border:none text-align:right;"></td>
         <td>-</td>
         <td>Nummber of thread per coil</td>
         </tr>
 	
 	<tr>
-        <td>s:</td>
-        <td><input type="nummber" id="s" value="0.00" style="border:none text-align:center;"></td>
+        <td>s :=</td>
+        <td><input type="nummber" id="s" value="0.00" style="border:none text-align:right;"></td>
         <td>mm</td>
         <td>Wrench size</td>
         </tr>
 	
 	<tr>
-        <td>D<sub>0</Sub>:</td>
-        <td><input type="nummber" id="D_0" value="0.00" style="border:none text-align:center;"></td>
+        <td>D<sub>0</Sub> :=</td>
+        <td><input type="nummber" id="D_0" value="0.00" style="border:none text-align:right;"></td>
         <td>mm</td>
         <td>Bolt hole diameter</td>
         </tr>
 	
 	<tr>
-        <td>&alpha;</td>
-        <td><input type="nummber" id="alpha" value="0.00" style="border:none text-align:center;"></td>
+        <td>&alpha; :=</td>
+        <td><input type="nummber" id="alpha" value="0.00" style="border:none text-align:right;"></td>
         <td>deg</td>
         <td>Thread angle</td>
         </tr>
@@ -97,21 +99,21 @@
   	</tr>
 		
 	<tr>
-        <td>Name:</td>
-        <td><input type="nummber" id="lu" value="None" style="border:none text-align:center;"></td>
+        <td>Name: =</td>
+        <td><input type="nummber" id="lu" value="None" style="border:none text-align:right;"></td>
         <td>-</td>
         <td>Lubricant name</td>
         </tr><tr>
         
-	<td>&mu;</td>
-        <td><input type="nummber" id="u" value="0.00" style="border:none text-align:center;"></td>
+	<td>&mu; :=</td>
+        <td><input type="nummber" id="u" value="0.00" style="border:none text-align:right;"></td>
         <td>-</td>
         <td>Friction factor for thread (copper lubricant)</td>
         </tr>
 	
 	<tr>
-        <td>&mu;<sub>nut</sub></td>
-        <td><input type="nummber" id="un" value="0.00" style="border:none text-align:center;"></td>
+        <td>&mu;<sub>nut</sub> :=</td>
+        <td><input type="nummber" id="un" value="0.00" style="border:none text-align:right;"></td>
         <td>-</td>
         <td>Friction factor for nut(dry surface, mashined)</td>
         </tr>
@@ -121,29 +123,29 @@
   	</tr>
 		
 	<tr>
-        <td>Name:</td>
-        <td><input type="nummber" id="bm" value="SA-193 Gr.B16" style="border:none text-align:center;"></td>
+        <td>Name :=</td>
+        <td><input type="nummber" id="bm" value="SA-193 Gr.B16" style="border:none text-align:right;"></td>
         <td>-</td>
         <td>Bolt material</td>
         </tr>
 			
 	<tr>
-        <td>R<sub>e</sub>:</td>
-        <td><input type="nummber" id="Re" value="0.00" style="border:none text-align:center;"></td>
+        <td>R<sub>e</sub> :=</td>
+        <td><input type="nummber" id="Re" value="0.00" style="border:none text-align:right;"></td>
         <td>MPa</td>
         <td>Yield stress of bolt</td>
         </tr>
 			
 	<tr>
         <td>T<sub>e</sub>:</td>
-        <td><input type="nummber" id="t" value="20.00" style="border:none text-align:center;"></td>
+        <td><input type="nummber" id="t" value="20.00" style="border:none text-align:right;"></td>
         <td><sup>o</sup>C</td>
         <td>Bolt temperature</td>
         </tr>
 			
 	<tr>
-        <td>&phi;</td>
-        <td><input type="nummber" id="Re_ratio" value="0.00" style="border:none text-align:center;"></td>
+        <td>&phi; :=</td>
+        <td><input type="nummber" id="Re_ratio" value="0.00" style="border:none text-align:right;"></td>
         <td>-</td>
         <td>Near yield limit ratio</td>
         </tr>
@@ -157,8 +159,11 @@
 		<button onclick="calculate()">Calculate</button>
         </div>
 		
-        <!-- Results Table section -->
-	<h1>2. Result of calculation</h1>
+        <!-- --------------------- -->
+	<!-- Results Table section -->
+	<!-- --------------------- -->
+	
+	    <h1>2. Result of calculation</h1>
         <table id= "table-result" style="background=#333;">
             <tr>
                 <th style="align:left width:5%;">Variable</th>

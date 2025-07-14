@@ -111,6 +111,13 @@ function calculate() {
 	document.getElementById("T").value = T.toFixed(0);
 	document.getElementById("r_T").value = r_T.toFixed(2);
 	
+	// write notes
+	document.getElementById("Note_1").value = "Example calculation is only for educational purpose.";
+	document.getElementById("Note_2").value = "The calculation presented herein is SEP calculation.";
+	document.getElementById("Note_3").value = "Before any comertial use, consult Senior/Licenced Engineer.";
+	document.getElementById("Note_4").value = "Friction factor is used for MOLYKOTE 1000.";
+	document.getElementById("Note_5").value = "Example is for metric bolt M76x3 and 20 1500 RTJ flange";
+	
 	// message to inform User 
 	alert("Calculation finished.");	
 }

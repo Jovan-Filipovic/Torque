@@ -49,6 +49,8 @@ function clear_values() {
 
 // Script to load pre-defined values to the input section
 function load_example() {
+	//clear all fields
+	clear_values();
 	// load input values
 	document.getElementById("D").value = "76.000";
 	document.getElementById("P").value = "3.000";

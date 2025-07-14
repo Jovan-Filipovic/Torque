@@ -96,17 +96,17 @@ function calculate() {
 	let r_T = 100*Tu/Tn;
 		
 	// write output: rounded values
-	document.getElementById("d_1").value = d_1.toFixed(4);
-	document.getElementById("d_2").value = d_2.toFixed(4);
-	document.getElementById("d_3").value = d_3.toFixed(4);
-	document.getElementById("phi").value = phi.toFixed(4);
-	document.getElementById("rn").value = rn.toFixed(4);
-	document.getElementById("ru").value = ru.toFixed(4);
-	document.getElementById("As").value = As.toFixed(4);
-	document.getElementById("F").value = F.toFixed(4);
-	document.getElementById("Tn").value = Tn.toFixed(4);
-	document.getElementById("Tu").value = Tu.toFixed(4);
-	document.getElementById("T").value = T.toFixed(4);
+	document.getElementById("d_1").value = d_1.toFixed(3);
+	document.getElementById("d_2").value = d_2.toFixed(3);
+	document.getElementById("d_3").value = d_3.toFixed(3);
+	document.getElementById("phi").value = phi.toFixed(5);
+	document.getElementById("rn").value = rn.toFixed(5);
+	document.getElementById("ru").value = ru.toFixed(3);
+	document.getElementById("As").value = As.toFixed(1);
+	document.getElementById("F").value = F.toFixed(0);
+	document.getElementById("Tn").value = Tn.toFixed(0);
+	document.getElementById("Tu").value = Tu.toFixed(0);
+	document.getElementById("T").value = T.toFixed(0);
 	document.getElementById("r_T").value = r_T.toFixed(2);
 	
 	// message to inform User 
